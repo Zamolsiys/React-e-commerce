@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:aliceblue ;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 50px auto;
+}
+
+header {
+    position: relative;
+}
+
+
+
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+    transform: scale(1);
+  }
+
+
+a:hover {
+    color: #dc3d3d;
+}
+  
+
+
+header ul.nav {
+    float: right;
+    list-style: none;
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+header ul.nav li:hover {
+    color: #dc3d3d;
+}
+
+
+header .presentation {
+    position: relative;
+    margin: 50px 0;
+    background: url(./img/backgroundimg.jpg) no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: gray;
+}
+
+header .presentation::after{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 1280px;
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
+    content: "Лучшие техно товары";
+}
+
+header .presentation::before{
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 1280px;
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+    content: "По самым низким ценам";
+}
+
+header .shop-cart-btn {
+    float: right;
+    cursor: pointer;
+    transition: color, 500ms ease;
+}
+
+header .shop-cart-btn:hover{
+    color: #dc3d3d;
+    transform: scale(1.5);
+}
+
+.active {
+    color: #dc3d3d;
+    transform: scale(1.5);
+    transition: transform;
+}
+
+header .shop-cart {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    background-color: rgb(235, 250, 247);
+    box-shadow: 4px 4px 7px 1px rgba(34, 60, 80, 0.2);
+    z-index: 1000;
+    border-radius: 5px 5px 0 0 ;
+    padding: 20px;
+}
+
+header .shop-cart .empty h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+header .shop-cart .item{
+    width: 100%;
+    float: left;
+    padding-bottom: 0;
+}
+
+header .shop-cart .item img {
+    width: 70px;
+    float: left;
+}
+
+header .shop-cart .item h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+header .shop-cart .item p{
+    color: darkgreen;
+    font-weight: 600;
+}
+
+header .shop-cart .item .delete-icon {
+    color: #ca5252;
+    float: right;
+    position: relative;
+    top: -25px;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+header .shop-cart .item .delete-icon:hover {
+    transform: scale(1.5);
+    color: #cc2424;
+}
+
+header .shop-cart .summa {
+    float: left;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.categories div {
+    display: inline-block;
+    background: #eaf3f5;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 500ms ease;
+}
+
+.categories div:hover {
+    border-color: silver;
+    transform: scale(1.1);
+}
+
+.full-item {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0000008a;
+    z-index: 999;
+    overflow: auto;
+}
+
+.full-item >div {
+    width: 30%;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px 30px;
+    background: #eaf3f5;
+    border-radius: 10px;
+
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 20px;
+    background: inherit;
+    border-radius: 10px;
+}
+
+main .item img, .full-item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+main .item img:hover, .full-item img:hover{
+    transform: scale(1.05);
+}
+
+
+main h2, .full-item h2,
+main p, .full-item p,
+main b, .full-item b {
+    margin: 10px 20px;
+    color: #333;
+}
+
+main b, .full-item b {
+    color: darkgreen;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+main .add-to-cart,
+.full-item .add-to-cart {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #ca5252;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #eaf3f5;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+main .add-to-cart:hover
+.full-item .add-to-cart:hover {
+    transform: scale(1.05) translateY(-5px);
+    transition: transform 500ms ease;
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+}
